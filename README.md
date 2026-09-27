@@ -34,6 +34,12 @@ A fully custom, 3D-printed robotic arm utilizing 4 NEMA 17 joints with 3D printe
 
 This project is a fully custom 1-meter robotic arm, 4 stepper-driven joints plus a servo wrist and claw. It is entirely 3D printed, including the gearboxes, except for 1 metal 71:1 planetary gearbox utilized on the lowest shoulder joint due to torque constraints and gear slippage. It was designed in Fusion 360 as a complete assembly first, then refined during the build, arm lengths, screw holes, and mounting points all went through minor revisions as issues came up on the bench.
 
+<p align="center">
+  <video src="Media/ArmDemonstrationVid.mp4" width="800" controls autoplay muted loop playsinline>
+    Your browser doesn't support embedded video. <a href="Media/ArmDemonstrationVid.mp4">Download the demo</a>.
+  </video>
+</p>
+
 ### Hardware & Power Architecture
 
 The arm uses 4 NEMA 17 stepper motors (base, shoulder1, shoulder2, elbow) driving custom 3D printed planetary gearboxes, plus an MG996R servo for wrist rotation and a second servo for claw actuation.
