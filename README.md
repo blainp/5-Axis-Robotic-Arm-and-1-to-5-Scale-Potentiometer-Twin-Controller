@@ -67,11 +67,6 @@ The system runs across two Arduinos and one Python/tkinter app:
 
   Both the real arm and the potentiometer arm expose 5 physical channels, but only 4 correspond to real stepper joints. A `MAP`/`MOTOR_MULT` pair translates between UI joint order and physical stepper index, and the unused 5th physical slot is simply never driven.
 
-<p align="center">
-<img width="700" alt="PLACEHOLDER - control loop / serial architecture diagram" src="" />
-</p>
-
-**Note on iteration:** An earlier version of the firmware treated the wrist command the same way as the stepper directions (a `-1/0/1` value), which silently discarded every real position value sent from Python, so the wrist pot could be turned all day and nothing would happen. Fixing this meant switching the wrist to an absolute 0-180° position command instead of a relative direction.
 
 ---
 
@@ -132,15 +127,14 @@ The system runs across two Arduinos and one Python/tkinter app:
 | Base Gearbox | 71:1 Metal Planetary Gearbox, H-type shaft | Torque reduction for the base joint (printed gearbox skipped under load here) |
 | Wrist Actuator | MG996R Servo | Wrist rotation, absolute 0-180° position control |
 | Claw Actuator | Servo (modified gripper design) | Claw open/close |
-| PLACEHOLDER | | |
 
-<p align="center">
-<img width="1000" alt="PLACEHOLDER - full BOM table / parts layout photo" src="" />
-</p>
 
 ---
 
 ## Known Constraints & Future Recommendations
+
+### Base Flexing Under Load
+When the arm is fully extended at an angle, the base flexes under the load. This causes the slight backlash of the 3D-printed gearboxes to be amplified, leading to jerky, bouncy, and imprecise movement which is demonstrated near the end of the demonstration video. To address this, the next version can be printed thicker with higher infill, and reinforcing plates could also be added to the internal structure of the base to resist deflection in direction it is most commonly loaded
 
 ### Base Joint Torque
 The original all-printed gearbox design skips under sustained load on the base joint, since it carries the weight of the entire arm above it. The metal 71:1 gearbox swap resolved this, but a stiffer printed design (or metal gearboxes across all joints) remains worth exploring if weight/cost allows.
