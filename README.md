@@ -95,26 +95,6 @@ The system runs across two Arduinos and one Python/tkinter app:
   <br>
 </p>
 
-## Repository Structure
-
-```text
-/Diagrams
-    Wiring diagrams and control-loop / serial architecture diagrams
-
-/Documentation
-    Design notes, BOM, and iteration history
-
-/Firmware
-    Arduino code for both the arm and the potentiometer control-arm
-
-/Software
-    Python/tkinter master controller (ArmLooky.py) and control-loop utilities
-
-/3D Models
-    Fusion 360 files and STLs for the arm, gearboxes, and mini control-arm
-```
-
----
 
 ## Bill of Materials (BOM)
 
